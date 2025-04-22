@@ -3,31 +3,56 @@ import {
   Business,
   Footer,
   Navbar,
-  Stats,
-  Testimonials,
   Hero,
   Testi,
+  CardDeal,
+  FirstVisitOverlay,
+  Dock,
+  Feature1,
+  Tabsx,
+  Testi2,
+  GlobeDemo,
+  Thescroll,CardGroup
 } from "./components";
 
 const App = () => (
   <div className="absolute bg-black w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-    <div className={`${styles.boxWidth}`}>
-      <Navbar />
-      <Hero />
-      </div>
-    </div  >
  
-      
+    <FirstVisitOverlay/>
+    <div>
+    <Navbar />
+    <Hero />
+
+    </div>
  
-    <div className={`bg-primary ${styles.flexCenter}${styles.paddingX}`}>
+    <Thescroll />
+    <div className={`bg-black ${styles.flexCenter}${styles.paddingX}`}>
       <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Testi />
-        <Business />
-        <Testimonials/>
+        <Testi2 />
+     
+      </div>
+    </div>
+    <Feature1 />
+    <div className={`bg-black ${styles.flexCenter}${styles.paddingX}`}>
+      <div className={`${styles.boxWidth}`}>
+        <CardDeal />
+       
+        <Tabsx />
+   
+        
+      </div>
+    </div>
+    <GlobeDemo />
+   
+
+    <div className={`bg-black ${styles.flexCenter}${styles.paddingX}`}>
+      <div className={`${styles.boxWidth}`}>
         <Footer />
       </div>
+    </div>
+
+    <div className="fixed bottom-2 left-0 w-full z-40">
+      <Dock />
     </div>
   </div>
 );

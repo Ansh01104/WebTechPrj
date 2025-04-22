@@ -23,23 +23,28 @@ const TheCard2 = ({ name, title, idleVideoSrc, hoverVideoSrc }) => {
 
   return (
     <div
-      className="flex flex-col justify-between px-2 py-2 rounded-[30px] max-w-[400px] md:mr-5 sm:mr-5 mr-0 my-5 feedback-card"
+      className="flex flex-col justify-between px-2 py-2 rounded-[15px] max-w-[400px] w-full my-2"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {/* Video Section */}
       <video
         ref={videoRef}
-        className="w-[400px]  h-[400px] rounded-[30px] object-cover"
+        className="w-full h-[250px] sm:h-[300px] md:h-[400px] rounded-[15px] object-cover"
         src={idleVideoSrc}  // Set initial source as idle video
         muted
+        preload="none"
         loop
       >
         {/* Fallback message if video tag isn't supported */}
         Your browser does not support the video tag.
       </video>
 
-     
+      {/* Optional title or additional content */}
+      <div className="mt-2 text-center">
+        <h3 className="font-poppins font-semibold text-lg">{title}</h3>
+        <p className="font-poppins text-sm text-gray-600">{name}</p>
+      </div>
     </div>
   );
 };
